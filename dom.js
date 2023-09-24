@@ -30,3 +30,19 @@ mTitle.style.borderBottom = 'solid 3px #000';
 let addItemTitle = document.getElementsByClassName('title');
 addItemTitle[0].style.fontWeight = 'bold'; //Making Text Bold
 addItemTitle[0].style.color = 'green'; // Change Font Color to Green
+
+//GETELEMENTBYCLASSNAME
+let items = document.getElementsByClassName('list-group-item');
+/*
+console.log(items);
+console.log(items[1]);
+items[1].textContent = 'Hello 2';
+items[1].style.fontWeight = 'bold';
+*/
+items[2].style.backgroundColor = 'green';
+
+// items.style.fontWeight = 'bold'; //Do not work because it is an Array Form.
+
+for(let i=0; i<items.length; i++){
+    items[i].style.fontWeight = 'bold';
+}
