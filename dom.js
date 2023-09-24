@@ -64,6 +64,7 @@ for(let i=0; i<li.length; i++){
 */
 
 //QUERYSELECTOR
+/*
 let header = document.querySelector('#main-header'); //by ID
 console.log(header);
 header.style.borderBottom = 'solid 4px brown';
@@ -86,3 +87,20 @@ secondItem.style.backgroundColor = 'green';
 
 let thirdItem = document.querySelector('.list-group-item:nth-child(3)'); //Item 3
 thirdItem.style.display = 'none';
+*/
+
+//QUERYSELECTORALL
+let titles = document.querySelectorAll('.title');
+console.log(titles);
+titles[0].textContent = 'Hello';
+//titles[1].textContent = 'World';
+
+let items = document.querySelectorAll('.list-group-item');
+console.log(items);
+items[1].style.color = 'green';
+
+let odd = document.querySelectorAll('li:nth-child(odd)');
+
+for(let i=0; i<odd.length; i++){
+    odd[i].style.backgroundColor = 'green';
+}
