@@ -50,6 +50,7 @@ for(let i=0; i<items.length; i++){
 */
 
 //GETELEMENTBYTAGNAME
+/*
 let li = document.getElementsByTagName('li');
 console.log(li);
 console.log(li[1]);
@@ -60,3 +61,28 @@ li[1].style.backgroundColor = 'yellow';
 for(let i=0; i<li.length; i++){
     li[i].style.backgroundColor = 'grey';
 }
+*/
+
+//QUERYSELECTOR
+let header = document.querySelector('#main-header'); //by ID
+console.log(header);
+header.style.borderBottom = 'solid 4px brown';
+
+let input = document.querySelector('input'); // by TAG
+input.value = 'Hello World';  //There are 2 inputs on the page, but it will grab the 1st one by default.
+
+// For 2nd input
+let submit = document.querySelector('input[type = "submit"]');
+submit.value = "SEND";
+
+var item = document.querySelector('.list-group-item'); // by CLASS
+item.style.color = 'red';   //It will change only Item 1 red.
+
+let lastItem = document.querySelector('.list-group-item:last-child');
+lastItem.style.color = 'blue';
+
+let secondItem = document.querySelector('.list-group-item:nth-child(2)');  // Item 2
+secondItem.style.backgroundColor = 'green';
+
+let thirdItem = document.querySelector('.list-group-item:nth-child(3)'); //Item 3
+thirdItem.style.display = 'none';
